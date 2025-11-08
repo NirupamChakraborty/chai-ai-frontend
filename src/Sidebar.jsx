@@ -9,8 +9,8 @@ function Sidebar() {
     const getAllThreads = async () => {
         try {
             const response = await fetch("https://chat-backend-delta-one.vercel.app/api/thread");
-            const res = await response.json();
-            const filteredData = res.map(thread => ({threadId: thread.threadId, title: thread.title}));
+            const data = await response.json();
+            const filteredData = data.threads.map(thread => ({threadId: thread.threadId, title: thread.title}));
             //console.log(filteredData);
             setAllThreads(filteredData);
         } catch(err) {

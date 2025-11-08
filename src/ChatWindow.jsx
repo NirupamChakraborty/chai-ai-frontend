@@ -30,7 +30,7 @@ function ChatWindow() {
         };
 
         try {
-            const response = await fetch("http://chat-backend-delta-one.vercel.app/api/chat", options);
+            const response = await fetch("https://chat-backend-delta-one.vercel.app/api/chat", options);
             const res = await response.json();
             // console.log(res);
             setReply(res.reply);
